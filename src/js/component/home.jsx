@@ -1,24 +1,54 @@
 import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import Navbar from "./navbar.jsx";
+import Jumbotron from "./jumbotron.jsx";
+import Form from "./form.jsx";
+import Footer from "./footer.jsx";
 
 //create your first component
 const Home = () => {
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className = "container-fluid">
+			<Navbar 
+				title="4Geeks"
+				home="Home"
+				link="Link"
+				menuDropdown="Dropdown"
+				action="Action"
+				anotherAction="Another Action"
+				something="Something else here"
+				search="Search"
+			/>
+			<Jumbotron 
+				header="Featured"
+				title="4Geeks"
+				description="With supporting text below as a natural lead-in to additional content."
+				button="Go Somewhere"
+				footer="Footer"
+			/>
+			<Form
+				email="Email"
+				password="Password"
+				adress="Address"
+				adress2="Address2"
+				city="city"
+				state="State"
+				city1="Lisbon"
+				city2="Porto"
+				city3="Oeiras"
+				city4="Viseu"
+				zip="Zip Code"
+				check="Check me Out"
+				signIn="Sign In"
+			/>
+			<Footer
+				home="Home"
+				features="Features"
+				pricing="Pricing"
+				faqs="FAQs"
+				about="About"
+				company="2023 Luís Santos, Inc."		
+			/>
+
 		</div>
 	);
 };
